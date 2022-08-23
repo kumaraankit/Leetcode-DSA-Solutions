@@ -1,7 +1,6 @@
-/**
- * @param {number[][]} accounts
- * @return {number}
- */
+//Problem statement
+ //https://leetcode.com/problems/richest-customer-wealth/
+
  var maximumWealth = function(accounts) {
     let maximumWealthSum=0;
     
