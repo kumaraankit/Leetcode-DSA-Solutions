@@ -1,5 +1,5 @@
 // Problem Statement
-[Problem](https://leetcode.com/problems/running-sum-of-1d-array/)
+// https://leetcode.com/problems/running-sum-of-1d-array/
 
 var runningSum = function(nums) {
     let ans=[];
