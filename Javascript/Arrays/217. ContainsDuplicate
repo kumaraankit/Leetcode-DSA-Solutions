@@ -1,0 +1,16 @@
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums, numSet=new Set()) {
+    for(const num of nums){
+        if(numSet.has(num)) return true;
+
+        numSet.add(num)
+    }
+
+    return false;
+};
+
+// time complexity - O(N)
+//space complexity- O(N)
