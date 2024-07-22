@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
+        unordered_map<int,string> mapNamesToHeight;
+
+        for(int i=0;i<names.size();i++){
+            mapNamesToHeight[heights[i]]=names[i];
+        }
+  // reversees the iteration in reverse order
+        sort(heights.rbegin(),heights.rend());
+
+        for(int i=0;i<names.size();i++){
+            names[i]=mapNamesToHeight[heights[i]];
+        }
+        return names;
+    }
+};
+
+// time complexity is O(nlogn) as program is using sort function
+// space complexity is O(n) as we created additional hashMap
