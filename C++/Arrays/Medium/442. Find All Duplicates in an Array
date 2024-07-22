@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        // There are few ways we can solve this problem but we need to maintain O(n) so sorting goes out of the hand as it will be O(nlogn)
+        // hashmap also cannot be done due to extra space 
+
+        // so the best possible way to do is to check and mark element as negative
+        // if found negative then its a duplicate and store the result into vector and return
+        vector<int> result;
+
+        for(int i=0;i<nums.size();i++){
+            int val=abs(nums[i]);
+            if(nums[val-1]<0){
+                result.push_back(val);
+            }
+            nums[val-1]*=-1;
+        }
+        return result;
+    }
+};
